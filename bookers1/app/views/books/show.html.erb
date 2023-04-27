@@ -1,13 +1,16 @@
 <!--フラッシュメッセージを状況に応じて表示させる-->
-<% if flash[:notice] %>
-  <%= flash[:notice] %>
-  <% flash.delete(:notice) %>
-<% end %>
-
+<div class="show-box">
+  <% if flash[:notice] %>
+    <%= content_tag :div, flash[:notice], class: "notice"%>
+    <% flash.delete(:notice) %>
+  <% end %>
 <!--レコードの表示-->
-<p class="show-title">Title: <span><%= @book.title %></span></p>
-<p class="show-body">Body: <span><%= @book.body %></span></p>
-
+<p class="show-title">Title: <span class="show-text"><%= @book.title %></span></p>
+<p class="show-body">Body: <span class="show-text"><%= @book.body %></span></p>
+</div>
 <!--各ページへのリンク-->
-<%= link_to "Edit", edit_book_path(@book.id) %>
-<%= link_to "Back", books_path %>
+<div class="show-links">
+  <%= link_to "Edit", edit_book_path(@book.id)%>
+  <span class="show-links-line">|</span>
+  <%= link_to "Back", books_path %>
+</div>

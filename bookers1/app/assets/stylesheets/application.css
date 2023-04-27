@@ -20,6 +20,130 @@
   box-sizing: border-box;
 }
 
-.create-form-error {
+/*----------全体のCSS設定-------------*/
+
+a:link {
+  color: black;
+}
+a:visited{
+  color: gray;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}
+
+a {
+  font-size: 14px;
+}
+body {
+  margin: 30px 0px 30px 30px;
+}
+
+
+/*--------------TopページのCSS設定------------*/
+.bookers {
+  font-weight: bold;
+}
+.intro-text {
+  font-size: 13px;
+  padding: 30px 0px 0px 30px;
+}
+
+.intro-button {
+  margin: 30px 0px 0px 30px;
+}
+
+/*------------IndexページのCSS設定-----------*/
+th {
+  font-size: 13px;
+}
+
+td {
+  padding: 7px 5px 0px 5px;
+  font-size: 13px;
+}
+
+.new_book {
+  margin-top: 20px;
+}
+
+.create-form-title {
+  margin-top: 10px;
+}
+
+.submit-button {
+  margin-top: 10px;
+  padding: 2px 5px;
+}
+
+.text-area {
+  padding: 2px 1px;
+}
+
+.error-box {
+  width: 500px;
+  border: 2px solid red;
+  margin-top: 10px;
+}
+
+.error-box-title {
   background-color: red;
+  color: white;
+  padding: 7px 0px 7px 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.error-box-message {
+  background-color: lightgray;
+  padding: 50px 100px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.create-form-error-title {
+  width: 40px;
+  display: block;
+  background-color: red;
+}
+
+.create-form-error-box {
+  background-color: red;
+  padding: 2px;
+  display: inline-block;
+}
+
+/*--------------------ShowページのCSS設定----------------*/
+.show-box {
+  margin: 0px 0px 30px 50px;
+}
+
+.notice {
+  color: green;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.show-title {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.show-body {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.show-links {
+  margin-top: 50px;
+}
+
+.show-links-line {
+  color: gray;
+}
+
+.show-text {
+  font-weight: normal;
 }
