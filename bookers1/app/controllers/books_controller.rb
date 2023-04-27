@@ -4,11 +4,11 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+## createアクションとupdateアクションの挙動の違いに
   def create
-    # editから来たのかindexから来たのか判断する
     @book = Book.new(book_params)
     @books = Book.all
-    if @book.save
+    if @book.save  # 保存が成功したかで分岐
       flash[:notice] = "Book was successfully created"
       render :show
     else
@@ -18,7 +18,7 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    if @book.update(book_params)
+    if @book.update(book_params) # 更新が成功したかで分岐
       flash[:notice] = "Book was successfully created"
       render :show
     else
